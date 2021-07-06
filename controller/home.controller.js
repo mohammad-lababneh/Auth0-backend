@@ -1,5 +1,12 @@
+
+
+
+
+'use strict';
+const seedUser = require ('../models/user.model')
 const homeController=(req,res)=>{
-    res.send('this is home wep');
+  const userObject=seedUser();
+    res.json(userObject);
 }
 
 module.exports=homeController;
@@ -7,3 +14,4 @@ module.exports=homeController;
 
 
 // compleate home page from video
+// done

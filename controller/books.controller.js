@@ -3,11 +3,13 @@ const userModel = require('../models/user.model')
 
 const booksController=(req,res)=>{   
  const searchQuery=req.query.email;
-userModel.findOne({email:searchQuery},(user)=>{
-    if(!user){
+userModel.findOne({email:searchQuery},(err,user)=>{
+    if(err){
 
-        res.send('user not found')
+        console.log(typeof(user))
+        res.send(err.message)
     }else{
+        console.log(typeof(user.books))
         res.json(user.books)
     }
 })

@@ -17,7 +17,7 @@ const port = process.env.PORT;
 
 
 
-mongoose.connect('mongodb://localhost:27017/favBooks',
+mongoose.connect('mongodb://localhost:27017/faveBooks',
     { useNewUrlParser:true,useUnifiedTopology:true});
  
 app.get('/books',booksController);
@@ -29,47 +29,6 @@ app.listen(port,()=>{
 }
 // done
 )
-// const client = jwksClient({
-//     // this url comes from your app on the auth0 dashboard 
-//     jwksUri: `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`
-// });
-
-// // this is a ready to use function
-// const getKey = (header, callback) => {
-//     client.getSigningKey(header.kid, function (err, key) {
-//         const signingKey = key.publicKey || key.rsaPublicKey;
-//         callback(null, signingKey);
-//     });
-// }
-// // 'Bearer ;alsdkj;laskd;lkasd;lkl'
-// app.get('/authorize', (req, res) => {
-//     const token = req.headers.authorization.split(' ')[1];
-//     jwt.verify(token, getKey, {}, (err, user) => {
-//         if (err) {
-//             res.send('invalid token');
-//         }
-//         res.send(user)
-//     })
-//     res.send(token);
-// });
-
-// app.listen(process.env.PORT, () => {
-//     console.log(`listening to port: ${process.env.PORT}`);
-// })
-// mongoose.connect('mongodb://localhost:27017/favCats',
-//     { useNewUrlParser: true, useUnifiedTopology: true }
-// );
-
-// app.get('/books', BooksController);
-// app.get('/givemebooks', (req, res) => {
-//     booksName = req.query.booksName
-//     BooksModel.findOne({ name: booksName }, (error, book) => {
-//         if (error) {
-//             res.send(error.message)
-//         }
-//         res.send(book);
-//     });
-// });
 
 
 

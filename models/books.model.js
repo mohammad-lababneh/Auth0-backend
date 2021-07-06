@@ -10,10 +10,11 @@ cats:
     name:{type:String}
 */
 
-const booksSchema= new mongoose.Schema({
+const bookSchema= new mongoose.Schema({
     name:{type:String},
     description:{type:String},
     status:{type:String}
 })
 // const bookModel = mongoose.model('bools', booksSchema)
-module.exports=booksSchema // 
+module.exports=bookSchema 
+//done 
