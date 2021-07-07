@@ -42,8 +42,12 @@ const seedUser=()=>{
         email:'lababnehmohammad96@gmail.com',
         books:[mySystem,art0fwar,feLawsOfPower]
     })
+    const erada = new userModel({
+        email:'erada.abdalrhman@gmail.com',
+        books:[mySystem,art0fwar,feLawsOfPower]
+    })
     mohammad.save();
-    console.log(mohammad);
-    return (mohammad)
+    erada.save();
+    return (mohammad,erada)
 }
 module.exports=seedUser;
