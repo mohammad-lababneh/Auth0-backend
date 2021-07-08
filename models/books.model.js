@@ -1,15 +1,5 @@
-  
 'use strict';
-
 const mongoose=require('mongoose');//deal with Schema
-
-/*
-first define a schema 
-schema: description about how the data must looklike in the database
-cats:
-    name:{type:String}
-*/
-
 const bookSchema= new mongoose.Schema({
     name:{type:String},
     description:{type:String},

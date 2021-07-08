@@ -9,13 +9,9 @@ const booksController = require('./controller/books.controller');
 
 app.use(cors()); // 
 const port = process.env.PORT;
-
 // const jwt = require('jsonwebtoken');
 // const jwksClient = require('jwks-rsa');
 // const BooksModel = require('./models/books.model');
-
-
-
 
 mongoose.connect('mongodb://localhost:27017/faveBooks',
     { useNewUrlParser:true,useUnifiedTopology:true});
